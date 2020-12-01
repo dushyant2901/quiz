@@ -26,7 +26,7 @@ var highScores=[{
 }
 ]
 function play(Question,Answer){
-  var userAnswer=readlineSync.question(c8(Question));
+  var userAnswer=readlineSync.keyIn(c8(Question),{limit: '$<1-3>'});
   if (userAnswer===Answer){
     console.log(c7("You Are Right!!!"))
    score=score+5
